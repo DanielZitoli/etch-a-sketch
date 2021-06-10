@@ -34,34 +34,150 @@ body{
 
 }
 
-.game-controls{
-    width: 400px;
-    height: 450px;
-    border: 2px solid;
-    border-radius: 50px;
-    background-color: #667788;
-    margin: auto;
-    display: grid;
-    grid-template-rows: 1fr 5fr;
-    box-shadow: 8px 8px 16px #333;
+    .game-controls{
+        width: 400px;
+        height: 450px;
+        border: 2px solid;
+        border-radius: 50px;
+        background-color: #76b1ec;
+        margin: auto;
+        display: grid;
+        grid-template-rows: 1fr 5fr;
+        box-shadow: 8px 8px 16px #333;
 
-}
+    }
 
-.control-title{
-    border-bottom: 2px solid;
-    text-align: center;
+        .control-title{
+            border-bottom: 2px solid;
+            text-align: center;
 
-}
+        }
 
-h2{
-    font-size: 40px;
-    margin: 15px auto 0px;
-}
+            h2{
+                font-size: 50px;
+                margin: 5px auto 0px;
+            }
 
-.controls{
-  display: grid;
-  grid-template-rows: 2fr 2fr 1fr;
-}
+        .controls{
+        display: grid;
+        grid-template-rows: 4fr 2fr 2fr 2fr;
+        }
+            #select-color{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                border-bottom: 2px solid;
+            }
+                #select-color > button{
+                    width: 140px;
+                    height: 50px;
+                    border: 1px solid;
+                    border-radius: 10px;
+                    margin: auto 10px;
+                    box-shadow: 4px 4px #111;
+                }
+                #select-color > button:hover{
+                    transform: scale(1.1);
+                   
+                }
+                #black:hover{
+                    background-color: black;
+                    color: white;
+                }
+                #white:hover{
+                    color: black;
+                }
+                #greyscale:hover{
+                    background-color: #555;
+                    color: white;
+                }
+                #rainbow:hover{
+                    background-color: red;
+                    color: white;
+                }
+
+            #select-size{
+                display: flex;
+                border-bottom: 2px solid;
+            }
+                h3{
+                    font-size: 30px;
+                    margin: auto 0px auto 60px;
+                }
+
+                input{
+                    height: 30px;
+                    width: 50px;
+                    margin: auto 4px auto 10px;
+                    font-size: 20px;
+                    border-radius: 5px;
+                }
+
+                #select-size > button:hover{
+                   transform: scale(1.05);
+                   background-color: #eee;
+                }
+
+                #select-size > button{
+                    width: 90px;
+                    height: 30px;
+                    text-align: center;
+                    font-size: 12px;
+                    margin: auto 0px;
+
+                } 
+            
+            #select-mode{
+                display: flex;
+                justify-content: center;
+                border-bottom: 2px solid;
+            }
+                #click{
+                    width: 150px;
+                    height: 50px;
+                    margin: auto 10px auto 0px;
+                    border: 2px solid;
+                    border-radius: 20px;
+                    box-shadow: 3px 3px;
+                }
+
+                #hover{
+                    width: 150px;
+                    height: 50px;
+                    margin: auto 0px auto 10px;
+                    border: 2px solid;
+                    border-radius: 20px;
+                    background-color: #999;
+                    box-shadow: 3px 3px;
+                }
+
+                #hover:hover{
+                    transform: scale(1.04);
+                  
+                }
+                #click:hover{
+                    transform: scale(1.04);
+                    
+                }
+            
+            #select-reset{
+                display: flex;
+                justify-content: space-between;
+            }
+
+                #reset{
+                    margin: auto auto;
+                    width: 160px;
+                    height: 60px;
+                    border: 2px solid;
+                    border-radius: 20px;
+                    box-shadow: 3px 3px;
+                }
+                #reset:hover{
+                    transform: scale(1.04)
+                }
+
+
 
 .container{
     width: 500px;
@@ -73,14 +189,16 @@ h2{
     flex-flow: wrap;
 }
 
-.pixel{
-    background-color: white;
-    height: var(--pixel-width);
-    width: var(--pixel-width);
-    margin: 0px;
-    border: 1px solid;
-}
+    .pixel{
+        background-color: white;
+        height: var(--pixel-width);
+        width: var(--pixel-width);
+        margin: 0px;
+        border: var(--border-width) solid var(--border-color);
+    }
 
 :root{
     --pixel-width: 10px;
+    --border-width: 1px;
+    --border-color: black;
 }
