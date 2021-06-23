@@ -199,7 +199,7 @@ body{
 }
 
     .pixel{
-        background-color: white;
+        background-color: rgba(255, 255, 255, 1);
         height: var(--pixel-width);
         width: var(--pixel-width);
         margin: 0px;
